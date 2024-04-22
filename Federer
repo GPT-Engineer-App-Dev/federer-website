@@ -1,0 +1,47 @@
+import { Box, Container, Flex, Heading, Image, Link, Text, VStack } from "@chakra-ui/react";
+import { FaTrophy, FaRacket, FaQuoteLeft } from "react-icons/fa";
+
+const Index = () => {
+  return (
+    <Box bg="gray.50" minH="100vh" py={20}>
+      <Container maxW="container.xl" px={4}>
+        <Flex justify="center" mb={8}>
+          <Image src="https://placehold.co/600x400" boxSize="200px" borderRadius="full" border="2px solid" borderColor="gray.200" />
+        </Flex>
+        <Heading as="h1" size="xl" mb={4}>
+          Roger Federer
+        </Heading>
+        <Text fontSize="lg" mb={8}>
+          Professional Tennis Player
+        </Text>
+        <VStack spacing={4} align="start" mb={8}>
+          <Flex align="center">
+            <FaTrophy size={24} />
+            <Text fontSize="lg" ml={2}>
+              20 Grand Slam Titles
+            </Text>
+          </Flex>
+          <Flex align="center">
+            <FaRacket size={24} />
+            <Text fontSize="lg" ml={2}>
+              310 Weeks as World No. 1
+            </Text>
+          </Flex>
+        </VStack>
+        <Box bg="gray.100" p={4} mb={8} borderRadius={8}>
+          <Flex align="center">
+            <FaQuoteLeft size={24} />
+            <Text fontSize="lg" ml={2}>
+              "I've always believed that if you want to make a good first impression, start with a good last impression."
+            </Text>
+          </Flex>
+        </Box>
+        <Link href="https://twitter.com/rogerfederer" isExternal>
+          Follow me on Twitter
+        </Link>
+      </Container>
+    </Box>
+  );
+};
+
+export default Index;
